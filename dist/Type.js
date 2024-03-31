@@ -1,20 +1,5 @@
 "use strict";
-// console.log("this side mack")
-// let nameo:string = "rahul";
-// console.log(nameo)
 Object.defineProperty(exports, "__esModule", { value: true });
-// const sum = (a:number , b:number)=>{
-//     return a+b;
-// }
-// console.log(sum(2,3));
-// call back function using typescript
-// function caller(fn:()=>number){
-//     return 1;
-// }
-// function non_caller(caller){
-//     console.log(caller())
-// }
-// non_caller(caller)
 function callbacker(fn) {
     setTimeout(fn, 2000);
 }
@@ -24,7 +9,6 @@ function newCaller() {
 callbacker(newCaller);
 let myClubName = "TheXcodingClub";
 console.log(myClubName);
-// let me write a code for conditional statement in TS
 let a = 23;
 if (a > 18) {
     console.log("he is mature enough");
@@ -32,3 +16,31 @@ if (a > 18) {
 else {
     console.log("no go to your home you are not mature as my brother");
 }
+const identification = {
+    "nameo": "Rahul singh",
+    rollNo: 34
+};
+console.log(identification.nameo);
+function isLegal(user) {
+    if (user.age > 23) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+const user = {
+    firstName: "rakesh",
+    age: 78
+};
+console.log(isLegal(user));
+function findMax(arr) {
+    let maxi = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxi) {
+            maxi = arr[i];
+        }
+    }
+    return maxi;
+}
+console.log("the maximum value will be :" + findMax([100, 20, 2]));

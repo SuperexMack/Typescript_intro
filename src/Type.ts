@@ -2,7 +2,7 @@
 // let nameo:string = "rahul";
 // console.log(nameo)
 
-import { boolean } from "zod"
+import { boolean, number, string } from "zod"
 
 // const sum = (a:number , b:number)=>{
 //     return a+b;
@@ -52,9 +52,57 @@ if(a>18){
     console.log("no go to your home you are not mature as my brother")
 }
 
+const identification = {
+    "nameo": "Rahul singh",
+    rollNo : 34
+}
+
+console.log(identification.nameo)
+
+
+interface User{
+    firstName : string,
+    age : number,
+    
+}
+
+function isLegal(user:User){
+    if(user.age>23){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const user = {
+    firstName: "rakesh",
+    age: 78
+};
+
+console.log(isLegal(user));
+
+
+// arrays in TS
 
 
 
+
+// the below thing can onlu be done using type it cannot be done with the help of interface
+type NumberStorage = number[]
+
+function findMax(arr:NumberStorage){
+    let maxi = 0;
+    for(let i = 0 ; i<arr.length; i++){
+        if(arr[i]>maxi){
+            maxi = arr[i]
+        }
+        
+    }
+    return maxi;
+}
+
+
+console.log("the maximum value will be :" + findMax([100,20,2]))
 
 
 
